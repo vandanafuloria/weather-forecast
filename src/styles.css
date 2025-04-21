@@ -1,5 +1,11 @@
 *{
     margin:0;
+    color:lightblue;
+}
+body{
+   
+    background: #373B44;
+    background: linear-gradient(30deg, rgba(55, 59, 68, 1) 0%, rgba(66, 134, 244, 1) 100%);
 }
 :root{
  --sm-padding:10px;
@@ -9,6 +15,10 @@
  --xsml-padding:5px;
 
 }
+.date h2, .time h2{
+    font-family: monospace;
+    font-size: 1rem;
+}
 .logo img{
     width: 50px;
 }
@@ -16,23 +26,174 @@
     display: flex
     ;
         justify-content: space-between;
-        background: black;
+        align-items: center;
+       
         color: white;
-        padding:var(--sm-padding)
+        padding:var(--sm-padding);
+        border-bottom: 1px solid white;;
+}
+.search-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 .search-bar input{
     padding: var(--xsml-padding);
     font-size: var(--sm-font);
-    width: 60%;
-    min-width: 100px;
+   width: 80%;
+    min-width: 200px;
+    color:black;
+    border-radius: 0.5rem;
+    outline: none;
+    border:none;
+    color:rgb(47, 46, 46);
+    font-weight: 400;
+    border:1px solid rgb(11, 11, 59);
+    background-color: rgba(212, 230, 236, 0.954);
+    
+}
+.search-bar input:focus{
+    border:1px solid rgb(255, 255, 255);
+    transform: scaleY(1.08);
+}
+.logo{
+  display: flex;
+  justify-content: space-around;
+    align-items: center;
+}
+.logo h1{
+    display: inline;
 }
 
 .search-bar{
-    width: 50%;
-    margin: auto;
+  
+  margin:auto;
+  width: 80%;
+   
     margin-top:var(--sm-margin);
 }
 .search-bar button{
     padding:var(--xsml-padding);
     font-size: var(--sm-font);
+    color:black;
+    border-radius: 0.5rem;
+    background-color: rgb(255, 255, 255);
+   border:2px solid transparent;
+
+}
+.search-bar button:hover{
+    background-color: rgba(66, 134, 244, 1);
+    color:white;
+    border:2px solid blue;
+}
+.search-option{
+   
+    min-width: 100px;
+    margin:var(--sm-margin);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+.search-option i{
+     font-size: 30px;
+}
+.current-weather img{
+width: 100px;
+}
+.current-weather h4{
+    font-weight: lighter;
+    font-family: monospace;
+    font-size: small;
+    margin-bottom: 10px;
+}
+#city{
+    font-size: xx-large;
+    font-weight: 600;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#weather{
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: monospace;
+   
+}
+#country{
+    position: relative;
+    bottom: 10px;
+}
+.current-weather p{
+    font-size: 0.8rem;
+    font-family: monospace;
+    margin-top: var(--sm-margin);
+}
+.weather-update-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap:1rem;
+    margin:2rem;
+    border:1px solid gray;
+    border-radius: 20px;
+    padding:1rem;
+}
+.tm{
+    display: flex;
+    justify-content: space-around;
+}
+.details > div{
+    display: flex;
+    justify-content: space-around;
+    gap:1rem;
+    font-family: monospace;
+    font-size: large;
+    font-weight:100;
+}
+.weather-detail h4{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: var(--sm-margin);
+    font-size: 2rem;
+
+}
+.details div{
+    margin:var(--sm-margin)
+}
+.details h5{
+    font-weight: lighter;
+    text-align: left;
+}
+.details span{
+    width: 100px;
+    text-align: center;
+}
+#temp{
+    font-size: 100px;
+}
+@media(max-width:700px){
+    .weather-update-container{
+        gap:3rem;
+    }
+    .current-weather{
+        text-align: center;
+    }
+    .weather-detail{
+        text-align: center;
+    }
+    #temp{
+        font-size: 50px;
+    }
+}
+@media (max-width:740px){
+    .search-bar{
+        width: 100%;
+        margin: 1rem;
+
+
+    }
+    .search-bar input{
+        width: 70%;
+        margin:auto;
+    };
+
 }

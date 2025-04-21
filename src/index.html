@@ -13,30 +13,85 @@
     <title>weather-application</title>
   </head>
   <body>
-    <div>
+    <div class="main">
       <div class="header-container">
         <div class="logo">
           <img src="../assets/logo2.png" alt="logo" />
+          <h1>Today's</h1>
         </div>
         <div class="time">
-          <h2>9 : 40 Am</h2>
-          <span>time</span>
+          <h2>9:40 Am</h2>
         </div>
         <div class="date">
-          <h2>23 april 2025</h2>
-          <span>date</span>
+          <h2>23/4/2025</h2>
+        </div>
+        <div class="mode">
+          <button>night</button>
         </div>
       </div>
 
       <section class="main-container">
-        <div class="search-bar">
-          <input
-            type="text"
-            id="search"
-            placeholder="  Enter City"
-            style="font-family: Arial, FontAwesome"
-          />
-          <button>get weather</button>
+        <div class="search-container">
+          <div class="search-bar">
+            <input
+              type="text"
+              id="search"
+              placeholder="  Paris"
+              style="font-family: Arial, FontAwesome"
+              value=""
+            />
+            <button id="get-weather">get weather</button>
+          </div>
+          <div class="search-option">
+            <span><i class="fa-solid fa-location-crosshairs"></i></span>
+            <span><i class="fa-solid fa-microphone"></i></span>
+          </div>
+        </div>
+      </section>
+      <section class="weather-update-container">
+        <div class="current-weather">
+          <h4>Current-weather</h4>
+          <span id="city">Dehradun</span><span id="country">IN</span>
+          <div>
+            <img
+              class="weather-icon"
+              src="../assets/logo2.png"
+              alt="weather_icon"
+            />
+            <span id="temp">24 ℃ </span>
+            <h4 id="weather">Mostly sunny</h4>
+            <p id="desc">Clear Weather</p>
+          </div>
+        </div>
+        <div class="weather-detail">
+          <h4>Feels like <span id="approx-temp"> 👩🏻‍💻</span></h4>
+          <div class="tm">
+            <div>
+              <i class="fa-solid fa-arrow-up"></i
+              ><span id="max"> 23 &#8451;</span>
+            </div>
+            <div>
+              <i class="fa-solid fa-arrow-down"></i
+              ><span id="min"> 23 &#8451;</span>
+            </div>
+          </div>
+          <div class="details">
+            <div>
+              <i class="fa-solid fa-droplet"></i>
+              <h5>Humidity</h5>
+              <span id="humidity"> 73%</span>
+            </div>
+            <div>
+              <i class="fa-solid fa-wind"></i>
+              <h5>Wind</h5>
+              <span id="wind"> 18km/h</span>
+            </div>
+            <div>
+              <i class="fa-solid fa-life-ring"></i>
+              <h5>pressure</h5>
+              <span id="pressure"> 73%</span>
+            </div>
+          </div>
         </div>
       </section>
     </div>
