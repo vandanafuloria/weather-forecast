@@ -1,0 +1,38 @@
+*{
+    margin:0;
+}
+:root{
+ --sm-padding:10px;
+ --sm-margin:1rem;
+ --sm-font:1rem;
+
+ --xsml-padding:5px;
+
+}
+.logo img{
+    width: 50px;
+}
+.header-container{
+    display: flex
+    ;
+        justify-content: space-between;
+        background: black;
+        color: white;
+        padding:var(--sm-padding)
+}
+.search-bar input{
+    padding: var(--xsml-padding);
+    font-size: var(--sm-font);
+    width: 60%;
+    min-width: 100px;
+}
+
+.search-bar{
+    width: 50%;
+    margin: auto;
+    margin-top:var(--sm-margin);
+}
+.search-bar button{
+    padding:var(--xsml-padding);
+    font-size: var(--sm-font);
+}
