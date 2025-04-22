@@ -2,11 +2,17 @@
     margin:0;
     color:lightblue;
 }
+
+
+
 body{
-   
     background: #373B44;
     background: linear-gradient(30deg, rgba(55, 59, 68, 1) 0%, rgba(66, 134, 244, 1) 100%);
+    
 }
+
+   
+   
 :root{
  --sm-padding:10px;
  --sm-margin:1rem;
@@ -137,6 +143,8 @@ width: 100px;
     border:1px solid gray;
     border-radius: 20px;
     padding:1rem;
+    background: #373B44;
+    background: linear-gradient(30deg, rgba(55, 59, 68, 1) 0%, rgb(88, 144, 235, 1) 100% );
 }
 .tm{
     display: flex;
@@ -169,6 +177,55 @@ width: 100px;
 }
 #temp{
     font-size: 100px;
+}
+
+.week-update-container{
+    display: flex;
+gap:2rem;
+flex-wrap: wrap; /* not usually used with column, but you can */
+justify-content: center;  /* vertical alignment */
+align-items: center; 
+margin-top: 5rem;
+padding:2rem;
+
+   
+}
+.week-update-container .card{
+    border:white 1px solid;
+    padding:10px;
+    text-align: center;
+    background-color: rgba(51, 51, 77, 0.891);
+    border-radius: 10px;
+    width: 13%;
+    min-width: 200px;
+  
+    font-family: monospace;
+    font-weight: lighter;
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+    align-items: center;
+
+
+    
+    
+}
+.temp{
+    font-size: 2rem;
+ 
+    color:rgb(202, 228, 235);
+  
+    
+}
+.about-weather{
+    font-size: 1rem;
+    font-weight: lighter;
+    
+}
+    
+
+.week-update-container img{
+    width: 70px;
 }
 @media(max-width:700px){
     .weather-update-container{

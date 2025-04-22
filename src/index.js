@@ -17,7 +17,12 @@ const pressureEl = document.getElementById("pressure");
 const weatherEl = document.getElementById("weather");
 const weatherDesc = document.getElementById("desc");
 const icon = document.querySelector(".weather-icon");
+const cardEls = document.querySelectorAll(".card");
+console.log(cardEls);
 console.log(tempEl);
+
+let today = new Date();
+today = today.getDate();
 
 function setDataOnUi(data) {
   // city name update;
@@ -45,20 +50,117 @@ function setDataOnUi(data) {
   icon.src = iconUrl;
 }
 
+function displayWeekDataOnUi(date, week) {}
+
+function getWeekWeatherData() {
+  const city = cityInput.value;
+  const key = "7132f1e93852b973f5fed30585286805";
+
+  const weekWeather = fetch(
+    `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${key}&units=metric`
+  );
+  weekWeather
+    .then((response) => {
+      console.log(response);
+      return response.json(); // its giving whole object
+    })
+    .then((week) => {
+      console.log(week);
+      for (let el = 7; el < 40; el += 8) {
+        console.log(el);
+        const timestamp = week.list[el].dt;
+        const date = new Date(timestamp * 1000); // to convert it into millisecond;
+
+        // const only_date = date.toLocaleString().split(",");
+
+        //card one childdren
+        switch (el) {
+          case 7:
+            const firstCard = cardEls[0].children;
+
+            firstCard[1].textContent = week.list[el].main.temp;
+
+            firstCard[2].textContent = week.list[el].weather[0].main;
+            firstCard[3].textContent = week.list[el].weather[0].description;
+            const substr1 = week.list[el].dt_txt.substring(0, 10);
+
+            firstCard[4].textContent = substr1;
+            break;
+
+          case 15:
+            const secCard = cardEls[1].children;
+
+            secCard[1].textContent = week.list[el].main.temp;
+
+            secCard[2].textContent = week.list[el].weather[0].main;
+            secCard[3].textContent = week.list[el].weather[0].description;
+            const substr2 = week.list[el].dt_txt.substring(0, 10);
+
+            secCard[4].textContent = substr2;
+            break;
+
+          case 23:
+            const thirdCard = cardEls[2].children;
+
+            thirdCard[1].textContent = week.list[el].main.temp;
+
+            thirdCard[2].textContent = week.list[el].weather[0].main;
+            thirdCard[3].textContent = week.list[el].weather[0].description;
+            const substr3 = week.list[el].dt_txt.substring(0, 10);
+
+            thirdCard[4].textContent = substr3;
+            break;
+
+          case 31:
+            const fourCard = cardEls[3].children;
+
+            fourCard[1].textContent = week.list[el].main.temp;
+
+            fourCard[2].textContent = week.list[el].weather[0].main;
+            fourCard[3].textContent = week.list[el].weather[0].description;
+            const substr4 = week.list[el].dt_txt.substring(0, 10);
+
+            fourCard[4].textContent = substr4;
+            break;
+
+          case 39:
+            const fiveCard = cardEls[4].children;
+
+            fiveCard[1].textContent = week.list[el].main.temp;
+
+            fiveCard[2].textContent = week.list[el].weather[0].main;
+            fiveCard[3].textContent = week.list[el].weather[0].description;
+            const substr5 = week.list[el].dt_txt.substring(0, 10);
+
+            fiveCard[4].textContent = substr5;
+            break;
+        }
+
+        // all date
+        // by spliting its giving an array of size 2;
+        // [0] = date;
+        // [1] = time  , i want date only;
+      }
+
+      // by this the required data is coming in json parsed format
+    })
+    .catch((err) => {
+      console.log("week data", "went wrong");
+    });
+}
+
 function fetchData() {
   const city = cityInput.value;
   const key = "7132f1e93852b973f5fed30585286805";
 
-  const test = fetch(
+  const weather = fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`
   );
-  test
+  weather
     .then((response) => {
-      console.log("get the daata");
       return response.json();
     })
     .then((data) => {
-      console.log(data);
       setDataOnUi(data);
     })
     .catch((err) => {
@@ -68,4 +170,4 @@ function fetchData() {
 
 getWeatherEl.addEventListener("click", fetchData);
 
-console.log(obj);
+getWeatherEl.addEventListener("click", getWeekWeatherData);
