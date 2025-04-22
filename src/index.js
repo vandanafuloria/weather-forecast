@@ -1,4 +1,10 @@
 import "./styles.css";
+import logo from "./assets/logo2.png";
+import sunnyImg from "./assets/sunny.png";
+import cloud from "./assets/clouds.png";
+import rain from "./assets/rainy-day.png";
+import strom from "./assets/stormy.png";
+import snow from "./assets/snow.png";
 
 const cityInput = document.querySelector("#search");
 
@@ -24,6 +30,8 @@ console.log(tempEl);
 let today = new Date();
 today = today.getDate();
 
+/************************************************************ */
+
 function setDataOnUi(data) {
   // city name update;
   const city = data.name;
@@ -45,13 +53,13 @@ function setDataOnUi(data) {
 
   weatherEl.innerText = data.weather[0].main;
   weatherDesc.innerText = data.weather[0].description;
-  const iconCode = data.weather[0].icon;
-  const iconUrl = "https://openweathermap.org/img/w/" + iconCode + ".png";
-  icon.src = iconUrl;
+  const iconImg = setIcons(data.weather[0].main);
+  icon.src = iconImg;
+
+  console.log(icon);
 }
 
-function displayWeekDataOnUi(date, week) {}
-
+/****************************************************************************************** */
 function getWeekWeatherData() {
   const city = cityInput.value;
   const key = "7132f1e93852b973f5fed30585286805";
@@ -77,8 +85,10 @@ function getWeekWeatherData() {
         switch (el) {
           case 7:
             const firstCard = cardEls[0].children;
-
-            firstCard[1].textContent = week.list[el].main.temp;
+            const addIcon = setIcons(week.list[el].weather[0].main);
+            firstCard[0].src = addIcon;
+            console.log(firstCard[0]);
+            firstCard[1].textContent = `${week.list[el].main.temp}℃`;
 
             firstCard[2].textContent = week.list[el].weather[0].main;
             firstCard[3].textContent = week.list[el].weather[0].description;
@@ -89,8 +99,10 @@ function getWeekWeatherData() {
 
           case 15:
             const secCard = cardEls[1].children;
+            const addIcon2 = setIcons(week.list[el].weather[0].main);
+            secCard[0].src = addIcon2;
 
-            secCard[1].textContent = week.list[el].main.temp;
+            secCard[1].textContent = `${week.list[el].main.temp}℃`;
 
             secCard[2].textContent = week.list[el].weather[0].main;
             secCard[3].textContent = week.list[el].weather[0].description;
@@ -101,8 +113,9 @@ function getWeekWeatherData() {
 
           case 23:
             const thirdCard = cardEls[2].children;
-
-            thirdCard[1].textContent = week.list[el].main.temp;
+            const addIcon3 = setIcons(week.list[el].weather[0].main);
+            thirdCard[0].src = addIcon3;
+            thirdCard[1].textContent = `${week.list[el].main.temp}℃`;
 
             thirdCard[2].textContent = week.list[el].weather[0].main;
             thirdCard[3].textContent = week.list[el].weather[0].description;
@@ -113,8 +126,9 @@ function getWeekWeatherData() {
 
           case 31:
             const fourCard = cardEls[3].children;
-
-            fourCard[1].textContent = week.list[el].main.temp;
+            const addIcon4 = setIcons(week.list[el].weather[0].main);
+            fourCard[0].src = addIcon4;
+            fourCard[1].textContent = `${week.list[el].main.temp}℃`;
 
             fourCard[2].textContent = week.list[el].weather[0].main;
             fourCard[3].textContent = week.list[el].weather[0].description;
@@ -125,8 +139,9 @@ function getWeekWeatherData() {
 
           case 39:
             const fiveCard = cardEls[4].children;
-
-            fiveCard[1].textContent = week.list[el].main.temp;
+            const addIcon5 = setIcons(week.list[el].weather[0].main);
+            fiveCard[0].src = addIcon5;
+            fiveCard[1].textContent = `${week.list[el].main.temp}℃`;
 
             fiveCard[2].textContent = week.list[el].weather[0].main;
             fiveCard[3].textContent = week.list[el].weather[0].description;
@@ -149,6 +164,8 @@ function getWeekWeatherData() {
     });
 }
 
+/*************************************************************** */
+
 function fetchData() {
   const city = cityInput.value;
   const key = "7132f1e93852b973f5fed30585286805";
@@ -166,6 +183,22 @@ function fetchData() {
     .catch((err) => {
       console.log("OOps somthig wrnt wrong");
     });
+}
+
+function setIcons(type) {
+  switch (type) {
+    case "Clear":
+      return sunnyImg;
+    case "Clouds":
+      return cloud;
+
+    case "Rain":
+      return rain;
+    case "Thunderstorm":
+      return strom;
+    case "Snow":
+      return snow;
+  }
 }
 
 getWeatherEl.addEventListener("click", fetchData);
