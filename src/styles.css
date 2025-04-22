@@ -191,10 +191,11 @@ padding:2rem;
    
 }
 .week-update-container .card{
-    border:white 1px solid;
+    border:white 0.5px solid;
     padding:10px;
     text-align: center;
-    background-color: rgba(51, 51, 77, 0.891);
+    background: #000428;
+    background: linear-gradient(253deg, rgba(0, 4, 40, 0.6) 0%, rgba(0, 78, 146, 0.6) 100%);
     border-radius: 10px;
     width: 13%;
     min-width: 200px;
@@ -227,6 +228,19 @@ padding:2rem;
 .week-update-container img{
     width: 70px;
 }
+
+.mode select{
+    padding:0.3rem;
+    color:black;
+    border-radius: 10px;
+    
+}
+.mode option{
+    padding:1rem;
+}
+
+
+
 @media(max-width:700px){
     .weather-update-container{
         gap:3rem;

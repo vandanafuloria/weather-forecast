@@ -204,3 +204,34 @@ function setIcons(type) {
 getWeatherEl.addEventListener("click", fetchData);
 
 getWeatherEl.addEventListener("click", getWeekWeatherData);
+
+/*************************************************** */
+const mode = document.querySelector("#mode-select");
+mode.addEventListener("change", function () {
+  const main = document.querySelector(".main");
+
+  const detailSection = document.querySelector(".weather-update-container");
+  console.log(detailSection);
+  if (mode.value == "dark") {
+    main.style.backgroundColor = "";
+    main.style.backgroundImage =
+      "linear-gradient(23deg, rgb(60, 63, 65) 0%, rgb(16, 18, 21) 100%)";
+    detailSection.style.backgroundImage =
+      "linear-gradient(253deg, rgba(22, 34, 42, 1) 0%, rgba(58, 96, 115, 1) 100%)";
+
+    cardEls.forEach((card) => {
+      card.style.backgroundImage =
+        "linear-gradient(253deg, rgba(22, 34, 42, 1) 0%, rgba(58, 96, 115, 1) 100%)";
+      card.style.border = "none";
+    });
+  } else {
+    main.style.backgroundColor = "";
+    main.style.backgroundImage =
+      "linear-gradient(50deg, rgba(55, 59, 68, 1) 0%, rgba(66, 134, 244, 1) 100%)";
+    detailSection.style.backgroundImage = "";
+    cardEls.forEach((card) => {
+      card.style.backgroundImage = "";
+      card.style.border = "";
+    });
+  }
+});
