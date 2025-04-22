@@ -235,3 +235,38 @@ mode.addEventListener("change", function () {
     });
   }
 });
+
+/************************************************** */
+
+const dateEl = document.getElementById("date");
+const timeEl = document.getElementById("time");
+console.log(timeEl);
+
+document.addEventListener("DOMContentLoaded", () => {
+  cityInput.value = "delhi";
+  fetchData();
+  getWeekWeatherData();
+
+  const d = new Date();
+  dateEl.innerText = d.toLocaleDateString();
+
+  setInterval(() => {
+    timeUpdate();
+  }, 1000);
+});
+
+/****************************************************** */
+
+function timeUpdate() {
+  const t = new Date();
+  const options = {
+    hour: "numeric",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true, // 👈 this is the key!
+  };
+
+  const formattedTime = t.toLocaleTimeString("en-US", options);
+  console.log(formattedTime); // e.g. "4:36:12 PM"
+  timeEl.textContent = formattedTime;
+}
