@@ -12,10 +12,7 @@
 
 ![Desktop Dark mode](./src/assets/desktop-dark.png)
 
-<img src="./src/assets/phone-light.png" height="200"/>
-
-<img src="./src/assets/light.png" height="200"/>
-<img src="./src/assets/phone-dark.png" height="200"/>
+![phone view](./src/assets/image.png)
 
 # Installation
 
