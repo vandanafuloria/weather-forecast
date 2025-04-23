@@ -7,7 +7,7 @@ module.exports = {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
-    publicPath: "/weather-update/", // correct for GitHub Pages
+    publicPath: "/weather-forecast/", // correct for GitHub Pages
   },
   module: {
     rules: [
