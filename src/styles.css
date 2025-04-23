@@ -33,11 +33,12 @@ body{
     ;
         justify-content: space-between;
         align-items: center;
-       
+       flex-wrap: wrap;
         color: white;
         padding:var(--sm-padding);
         border-bottom: 1px solid white;;
 }
+
 .search-container{
     display: flex;
     justify-content: space-around;
@@ -181,12 +182,12 @@ width: 100px;
 
 .week-update-container{
     display: flex;
-gap:2rem;
+gap:2.5rem;
 flex-wrap: wrap; /* not usually used with column, but you can */
 justify-content: center;  /* vertical alignment */
 align-items: center; 
 margin-top: 5rem;
-padding:2rem;
+padding:1rem;
 
    
 }
@@ -197,14 +198,15 @@ padding:2rem;
     background: #000428;
     background: linear-gradient(253deg, rgba(0, 4, 40, 0.6) 0%, rgba(0, 78, 146, 0.6) 100%);
     border-radius: 10px;
-    width: 13%;
+   width: 10%;
+    max-width:250px;
     min-width: 200px;
-  
+
     font-family: monospace;
     font-weight: lighter;
     display: flex;
     flex-direction: column;
-    gap:0.5rem;
+    gap:1rem;
     align-items: center;
 
 
@@ -254,6 +256,9 @@ padding:2rem;
     #temp{
         font-size: 50px;
     }
+    .mode{
+        order:2;
+    }
 }
 @media (max-width:740px){
     .search-bar{
@@ -263,8 +268,16 @@ padding:2rem;
 
     }
     .search-bar input{
-        width: 70%;
+        width: 60%;
         margin:auto;
     };
+    .week-update-container{
+        padding: 10px !important;
+    }
+    .card{
+        width: 75%  !important;
+       max-width: 350px !important;
+      
+    }
 
 }

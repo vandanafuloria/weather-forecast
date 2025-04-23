@@ -1,7 +1,7 @@
 import "./styles.css";
 import logo from "./assets/logo2.png";
 import sunnyImg from "./assets/sunny.png";
-import cloud from "./assets/clouds.png";
+import cloud from "./assets/cloud.png";
 import rain from "./assets/rainy-day.png";
 import strom from "./assets/stormy.png";
 import snow from "./assets/snow.png";
@@ -267,6 +267,6 @@ function timeUpdate() {
   };
 
   const formattedTime = t.toLocaleTimeString("en-US", options);
-  console.log(formattedTime); // e.g. "4:36:12 PM"
+  // console.log(formattedTime); // e.g. "4:36:12 PM"
   timeEl.textContent = formattedTime;
 }
