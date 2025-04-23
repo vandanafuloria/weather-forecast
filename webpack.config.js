@@ -31,6 +31,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
+      favicon: ".src/assets/rain.png",
     }),
   ],
   mode: "development", // or 'production'
