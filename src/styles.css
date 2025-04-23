@@ -191,6 +191,7 @@ justify-content: center;  /* vertical alignment */
 align-items: center; 
 margin-top: 5rem;
 padding:1rem;
+padding-bottom: 2rem;
 
 
    
@@ -205,6 +206,7 @@ padding:1rem;
    width: 10%;
     max-width:250px;
     min-width: 200px;
+    padding-bottom: 4rem;
 
     font-family: monospace;
     font-weight: lighter;
