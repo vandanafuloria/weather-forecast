@@ -8,6 +8,7 @@
 body{
     background: #373B44;
     background: linear-gradient(30deg, rgba(55, 59, 68, 1) 0%, rgba(66, 134, 244, 1) 100%);
+    min-width: 350px;
     
 }
 

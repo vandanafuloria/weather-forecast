@@ -43,8 +43,8 @@ function setDataOnUi(data) {
 
   approxTempEl.innerText = `${Math.ceil(data.main.feels_like)}℃`;
 
-  maxTemp.innerText = `${Math.ceil(data.main.temp_max)}℃`;
-  minTemp.innerText = `${Math.floor(data.main.temp_min)}℃`;
+  maxTemp.innerText = `  ${Math.ceil(data.main.temp_max)} ℃`;
+  minTemp.innerText = `  ${Math.floor(data.main.temp_min)} ℃`;
   humidityEl.innerText = `${data.main.humidity}%`;
   const wind = data.wind.speed * 3.6;
 
