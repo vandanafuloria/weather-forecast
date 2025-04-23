@@ -7,8 +7,7 @@ module.exports = {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
-
-    publicPath: "/weather-update/", // cleans old files from /dist on each build
+    publicPath: "/weather-update/", // correct for GitHub Pages
   },
   module: {
     rules: [
@@ -35,4 +34,14 @@ module.exports = {
     }),
   ],
   mode: "development", // or 'production'
+
+  // Ensure devServer is inside the module.exports object
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, "dist"),
+    },
+    port: 8080,
+    open: true, // optional: opens the browser automatically
+    historyApiFallback: true, // for single-page apps (routes fallback to index.html)
+  },
 };
