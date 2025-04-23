@@ -8,6 +8,7 @@
 body{
     background: #373B44;
     background: linear-gradient(30deg, rgba(55, 59, 68, 1) 0%, rgba(66, 134, 244, 1) 100%);
+
     min-width: 350px;
     
 }
@@ -147,6 +148,7 @@ width: 100px;
     padding:1rem;
     background: #373B44;
     background: linear-gradient(30deg, rgba(55, 59, 68, 1) 0%, rgb(88, 144, 235, 1) 100% );
+    
 }
 .tm{
     display: flex;
@@ -189,6 +191,7 @@ justify-content: center;  /* vertical alignment */
 align-items: center; 
 margin-top: 5rem;
 padding:1rem;
+
 
    
 }
@@ -281,4 +284,7 @@ padding:1rem;
       
     }
 
+}
+.main{
+    height: fit-content;
 }
