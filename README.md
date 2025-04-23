@@ -8,7 +8,26 @@
 
 ## Images
 
-![desktop view](./assets/)
+![Desktop light mode](./src/assets/desktop-light.png)
+
+![Desktop Dark mode](./src/assets/desktop-dark.png)
+
+![phone light mode](./src/assets/phone-light.png)
+
+![phone dark mode](./src/assets/phone-dark.png)
+
+![phone mode](./src/assets/light.png)
+
+<!-- <img src="./src/assets/desktop-light.png" width="600"/>
+<br>
+<h5>desktop View </h4>
+
+<img src="./src/assets/desktop-dark.png" width="600"/>
+<br>
+<h5> Phone View</h5>
+<img src="./src/assets/phone-light.png" height="200"/>
+<img src="./src/assets/light.png" height="200"/>
+<img src="./src/assets/phone-dark.png" height="200"/> -->
 
 # Installation
 
