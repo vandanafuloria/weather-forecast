@@ -6,7 +6,9 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
-    clean: true, // cleans old files from /dist on each build
+    clean: true,
+
+    publicPath: "/weather-update/", // cleans old files from /dist on each build
   },
   module: {
     rules: [
