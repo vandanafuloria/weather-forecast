@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>weather-application</title>
+  <script defer src="/weather-update/bundle.js"></script></head>
+  <body>
+    <div class="main">
+      <div class="header-container">
+        <div class="logo">
+          <img src="/weather-update/9985be433ec99ef1fc64.png" alt="logo" />
+          <h1>Today's</h1>
+        </div>
+        <div class="time">
+          <h2 id="time">9:40 Am</h2>
+        </div>
+        <div class="date">
+          <h2 id="date">23/4/2025</h2>
+        </div>
+        <div class="mode">
+          <select id="mode-select">
+            <option value="">Mode</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+        </div>
+      </div>
+
+      <section class="main-container">
+        <div class="search-container">
+          <div class="search-bar">
+            <input
+              type="text"
+              id="search"
+              placeholder="  Paris"
+              style="font-family: Arial, FontAwesome"
+              value=""
+            />
+            <button id="get-weather">get weather</button>
+          </div>
+          <div class="search-option">
+            <span><i class="fa-solid fa-location-crosshairs"></i></span>
+            <span><i class="fa-solid fa-microphone"></i></span>
+          </div>
+        </div>
+      </section>
+      <section class="weather-update-container">
+        <div class="current-weather">
+          <span id="city">Dehradun</span><span id="country">IN</span>
+          <div>
+            <img
+              class="weather-icon"
+              src="/weather-update/7610299be6da6fba0d64.png"
+              alt="weather_icon"
+            />
+            <span id="temp">24 ℃ </span>
+            <h4 id="weather">Mostly sunny</h4>
+            <p id="desc">Clear Weather</p>
+          </div>
+        </div>
+        <div class="weather-detail">
+          <h4>Feels like <span id="approx-temp"> 👩🏻‍💻</span></h4>
+          <div class="tm">
+            <div>
+              <i class="fa-solid fa-arrow-up"></i
+              ><span id="max"> 23 &#8451;</span>
+            </div>
+            <div>
+              <i class="fa-solid fa-arrow-down"></i
+              ><span id="min"> 23 &#8451;</span>
+            </div>
+          </div>
+          <div class="details">
+            <div>
+              <i class="fa-solid fa-droplet"></i>
+              <h5>Humidity</h5>
+              <span id="humidity"> 73%</span>
+            </div>
+            <div>
+              <i class="fa-solid fa-wind"></i>
+              <h5>Wind</h5>
+              <span id="wind"> 18km/h</span>
+            </div>
+            <div>
+              <i class="fa-solid fa-life-ring"></i>
+              <h5>pressure</h5>
+              <span id="pressure"> 73%</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="week-update">
+        <div class="week-update-container">
+          <div class="card">
+            <img src="/weather-update/20e7d4a7d2e24dbce16d.png" alt="" />
+            <h4 class="temp">24 ℃</h4>
+            <h3 class="one about-weather">Mostly Sunny</h3>
+            <p class="desc">Clear</p>
+            <h4>
+              <span id="day">Tue</span> <span class="date">2/10/12025</span>
+            </h4>
+          </div>
+          <div class="card">
+            <img src="/weather-update/20e7d4a7d2e24dbce16d.png" alt="" />
+            <h4 class="temp">24 ℃</h4>
+            <h3 class="one about-weather">Mostly Sunny</h3>
+            <p class="desc">Clear</p>
+            <h4>
+              <span id="day">Tue</span> <span class="date">2/10/12025</span>
+            </h4>
+          </div>
+          <div class="card">
+            <img src="/weather-update/20e7d4a7d2e24dbce16d.png" alt="" />
+            <h4 class="temp">24 ℃</h4>
+            <h3 class="one about-weather">Mostly Sunny</h3>
+            <p class="desc">Clear</p>
+            <h4>
+              <span id="day">Tue</span> <span class="date">2/10/12025</span>
+            </h4>
+          </div>
+          <div class="card">
+            <img src="/weather-update/20e7d4a7d2e24dbce16d.png" alt="" />
+            <h4 class="temp">24 ℃</h4>
+            <h3 class="one about-weather">Mostly Sunny</h3>
+            <p class="desc">Clear</p>
+            <h4>
+              <span id="day">Tue</span> <span class="date">2/10/12025</span>
+            </h4>
+          </div>
+          <div class="card">
+            <img src="/weather-update/20e7d4a7d2e24dbce16d.png" alt="" />
+            <h4 class="temp">24 ℃</h4>
+            <h3 class="one about-weather">Mostly Sunny</h3>
+            <p class="desc">Clear</p>
+            <h4>
+              <span id="day">Tue</span> <span class="date">2/10/12025</span>
+            </h4>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
