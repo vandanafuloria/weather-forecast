@@ -2,7 +2,9 @@
 
 # <span style = "color:skyblue;"> Description </span>
 
-<span style="color: skyblue; font-style: italic;">This a project about weather conditon in different places across the globe, in which You can check the weather of any city / country. This application will tell you the Todays weather and next 5 days weather with temprature. So next time if you go somewhere check weather in advanced and be prepared. </span>
+<span style="color: skyblue; font-style: italic;">
+  This project provides weather updates for locations around the world. You can check the current weather and a 5-day forecast for any city or country. Stay informed with daily temperature details and plan your travels with confidence. Before heading out, check the weather in advance and be prepared!
+</span>
 
 # Have a Look of project [👉 Link](https://vandanafuloria.github.io/weather-update/)
 
