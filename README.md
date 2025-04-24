@@ -6,7 +6,7 @@
   This project provides weather updates for locations around the world. You can check the current weather and a 5-day forecast for any city or country. Stay informed with daily temperature details and plan your travels with confidence. Before heading out, check the weather in advance and be prepared!
 </span>
 
-# Have a Look of project [👉 Link](https://vandanafuloria.github.io/weather-update/)
+# Have a Look of project [👉 Link](https://vandanafuloria.github.io/weather-forecast/)
 
 ## Images
 
